@@ -1,0 +1,135 @@
+/* Background Gradient */
+body {
+    margin: 0;
+    padding: 20px;
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    background: linear-gradient(135deg, #ffb6d5, #ffe3f2, #ffd2ec, #ffc4dd);
+    background-size: 400% 400%;
+    animation: bgFlow 14s ease infinite;
+}
+
+@keyframes bgFlow {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Heartbeat Intro */
+.intro {
+    animation: heartbeat 1.8s infinite;
+}
+
+@keyframes heartbeat {
+    0% { transform: scale(1); }
+    30% { transform: scale(1.08); }
+    60% { transform: scale(0.97); }
+    100% { transform: scale(1); }
+}
+
+.her-name {
+    font-family: 'Great Vibes', cursive;
+    font-size: 55px;
+    color: #ff1e79;
+    margin-bottom: 5px;
+    text-shadow: 0 0 18px rgba(255, 0, 100, 0.4);
+}
+
+.intro-line {
+    font-family: 'Indie Flower', cursive;
+    font-size: 22px;
+    color: #444;
+}
+
+/* Subtitle */
+.subtitle {
+    font-size: 19px;
+    margin-top: 40px;
+    color: #333;
+}
+
+/* Glass Box */
+.recording {
+    background: rgba(255, 255, 255, 0.55);
+    padding: 20px;
+    margin: 20px auto;
+    width: 90%;
+    max-width: 420px;
+    border-radius: 20px;
+    backdrop-filter: blur(12px);
+    box-shadow: 0 4px 25px rgba(255, 0, 100, 0.25);
+    animation: floatBox 4s infinite ease-in-out;
+}
+
+@keyframes floatBox {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-7px); }
+    100% { transform: translateY(0px); }
+}
+
+.recording h2 {
+    color: #d10062;
+    margin-bottom: 10px;
+}
+
+/* Audio */
+audio {
+    width: 100%;
+    border-radius: 10px;
+}
+
+/* Floating Hearts */
+.hearts span {
+    position: fixed;
+    bottom: -20px;
+    font-size: 24px;
+    opacity: 0.7;
+    animation: floatUp 6s infinite ease-in;
+}
+
+.hearts span:nth-child(1) { left: 10%; animation-delay: 0s; }
+.hearts span:nth-child(2) { left: 25%; animation-delay: 1s; }
+.hearts span:nth-child(3) { left: 50%; animation-delay: 2s; }
+.hearts span:nth-child(4) { left: 70%; animation-delay: 3s; }
+.hearts span:nth-child(5) { left: 90%; animation-delay: 4s; }
+
+@keyframes floatUp {
+    0%   { transform: translateY(0); opacity: 0; }
+    30%  { opacity: 1; }
+    100% { transform: translateY(-700px); opacity: 0; }
+}
+
+/* Butterflies */
+.butterfly {
+    width: 70px;
+    position: fixed;
+    animation: fly 12s linear infinite;
+    opacity: 0.8;
+}
+
+.b1 { top: 70%; left: -10%; animation-delay: 0s; }
+.b2 { top: 50%; left: -10%; animation-delay: 4s; }
+.b3 { top: 30%; left: -10%; animation-delay: 8s; }
+
+@keyframes fly {
+    0% { transform: translateX(0) translateY(0) rotate(0deg); }
+    50% { transform: translateX(120vw) translateY(-80px) rotate(15deg); }
+    100% { transform: translateX(0) translateY(0) rotate(0deg); }
+}
+
+/* Sparkles */
+.sparkles {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: url("https://i.postimg.cc/XYFRM9zH/sparkles.png");
+    background-size: cover;
+    pointer-events: none;
+    opacity: 0.4;
+    animation: sparkleMove 10s linear infinite;
+}
+
+@keyframes sparkleMove {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-40px); }
+}
